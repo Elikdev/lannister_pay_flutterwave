@@ -4,7 +4,7 @@
   "description": "lannister pay(nodejs assessment)",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --detectOpenHandles",
     "dev": "nodemon --exec babel-node src/server.js",
     "start": "node dist/server.js",
     "build": "babel ./src -d dist --copy-files",
@@ -23,8 +23,8 @@
     "dotenv": "^14.3.2",
     "express": "^4.17.2",
     "joi": "^17.6.0",
-    "mongoose": "^6.1.8",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "redis": "^4.0.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.16.8",
@@ -32,6 +32,8 @@
     "@babel/node": "^7.16.8",
     "@babel/plugin-transform-runtime": "^7.16.10",
     "@babel/preset-env": "^7.16.11",
-    "nodemon": "^2.0.15"
+    "jest": "^27.5.0",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.2.2"
   }
 }

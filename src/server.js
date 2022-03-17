@@ -2,7 +2,6 @@ import app from "./app"
 import http from "http"
 import debug from "debug"
 import {PORT} from "./config/key_var"
-import dbConnect from "./config/db"
 
 const log = debug("log")
 
@@ -67,7 +66,6 @@ const startServer = () => {
 
 try {
  startServer();
- dbConnect();
 } catch (error) {
  log(error.message);
  process.exit(-1);

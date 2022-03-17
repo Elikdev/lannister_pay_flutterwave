@@ -19,10 +19,9 @@ export const errorResponse = (
   data = {}
 ) => {
   return res.status(status).json({
-    status: false,
+    status: "NOT OK",
     message,
-    error: true,
-    data,
+    response: data,
   })
 }
 
@@ -33,9 +32,6 @@ export const successResponse = (
   data = {}
 ) => {
   return res.status(status).json({
-    status: true,
-    message,
-    error: false,
-    data,
+    ...data,
   })
 }
